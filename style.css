@@ -1,0 +1,157 @@
+*{
+    font-family: poppins;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(1, 169, 169);
+}
+
+.container{
+    margin: 0px auto;
+    height: 100%;
+    max-width: 1500px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-blur{
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+.card{
+    position: relative;
+    margin: 2rem;
+    width: 17rem;
+    height: 17rem;
+    justify-content: center;
+    border-radius: 35px;
+    transition: transform .3s;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+    background-color: rgb(233, 233, 233);
+}
+
+.card:hover{
+    transform: scale(1.09);
+}
+
+.thumbnails{
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem;
+    border-radius: 30px;
+}
+
+.name{
+    position: relative;
+    top: -4.5rem;
+    float: left;
+    width: 88.5%;
+    height: 18%;
+    font-size: 3vh;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    color: whitesmoke;
+    opacity: 0%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    text-shadow: 0px 0px 10px black;
+    transition: 0.3s;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.card:hover .name{
+    opacity: 100%;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: black;
+    text-shadow: 0px 0px 1px black;
+}
+
+.popup-player{
+    width: 45vh;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    color: #333;
+    z-index: 1;
+    transition: transform 0.4s, top 0.4s;
+    box-shadow: 10px 100px 110px 110px inset;
+    visibility: hidden;
+}
+
+.popup-player img{
+    width: 35vh;
+    margin-bottom: 1vh;
+}
+
+.popup-player button{
+    margin-left: 80%;
+    cursor: pointer;
+    border: 0px;
+    font-size: 20px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background-color: transparent;
+}
+
+.popup-player audio{
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.searching{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    position: relative;
+}
+
+.form .fa-search{
+    background-color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #9ca3af;
+
+}
+
+.form-input{
+    background-color: white;
+    height: 3rem;
+    text-indent: 33px;
+    border-radius: 10px;
+    width: 20rem;
+}
+
+.form .searchbutton{
+    background-color: white;
+    height: 3rem;
+    width: 4rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
